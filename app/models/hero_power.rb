@@ -1,4 +1,4 @@
 class HeroPower < ApplicationRecord
-  belongs_to :Hero
-  belongs_to :Power
+  belongs_to :hero
+  belongs_to :power
 end
