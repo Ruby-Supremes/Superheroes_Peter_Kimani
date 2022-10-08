@@ -1,6 +1,6 @@
 class HeroPowersController < ApplicationController
     def create
-        hero_power = HeroPowers.create!(hero_powers_params)
+        hero_power = HeroPower.create!(hero_powers_params)
         render json: hero_power, status: :created
       end
       private
