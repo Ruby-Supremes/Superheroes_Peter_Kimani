@@ -1,6 +1,6 @@
 class PowersController < ApplicationController
-    rescue_from ActiveRecord::RecordNotFound, with: :power_not_found
-    rescue_from ActiveRecord::RecordInvalid, with: :validation_error
+rescue_from ActiveRecord::RecordNotFound, with: :power_not_found
+rescue_from ActiveRecord::RecordInvalid, with: :validation_error
     def index
         powers = Power.all
         render json: powers
@@ -25,7 +25,7 @@ class PowersController < ApplicationController
     end
     def validation_error
         render json: { error:  ["validation errors"]}, status: 422
-      end
+    end
 
     
 end
