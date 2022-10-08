@@ -5,4 +5,5 @@ class Power < ApplicationRecord
         length: {
             minimum: 20
         }
+    }
 end
