@@ -1,8 +1,8 @@
 # README
 
 ## TECHNOLOGIES USED
-Ruby on Rails
-SQLite
+1. Ruby on Rails
+2. SQLite
 
 # HOW TO USE REPO
 ## 1. FORK AND CLONE REPO ON LOCAL MACHINE
