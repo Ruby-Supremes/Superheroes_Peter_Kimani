@@ -15,7 +15,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :validation_error
 
     def update
         power = find_power
-        power.update(power_params)
+        power.update!(power_params)
         render json: power
     end
 
@@ -23,15 +23,14 @@ rescue_from ActiveRecord::RecordInvalid, with: :validation_error
     def power_params
         params.permit(:description)
     end
-
+    
     def power_not_found
         render json: { error: "Power not found" }, status: 404
     end
-    
+
     def validation_error
         render json: { error:  ["validation errors"]}, status: 422
     end
-    
     def find_power
         Power.find(params[:id])
     end
