@@ -10,11 +10,9 @@ rescue_from ActiveRecord::RecordInvalid, with: :validation_error
         render json: @power
     end
     def update
-        if @power.update(power_params)
-          render json: @power
-        else
-          render json: @power.errors, status: :unprocessable_entity
-        end
+        power = find_power
+        power.update(power_params)
+        render json: power
     end
     private
     def power_params
@@ -26,6 +24,8 @@ rescue_from ActiveRecord::RecordInvalid, with: :validation_error
     def validation_error
         render json: { error:  ["validation errors"]}, status: 422
     end
-
+    def find_power
+        Power.find(params[:id])
+    end
     
 end
