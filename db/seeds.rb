@@ -18,4 +18,9 @@ powers = Power.create([
     { name: "Getsugatensho", description: "Strong , fast and powerful"}
     ])
 
+heropowers = HeroPower.create([
+    {strength: "Strong", power_id: 1,hero_id: 2},
+    {strength: "Weak", power_id: 2,hero_id: 1}
+    ])
+
 puts '✅ Done seeding'
