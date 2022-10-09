@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts '🌱 Seeding superheroes...'
+
+heroes = Hero.create([
+    {name: "Peter", super_name: "Jaja"},
+    {name: "Ichigo", super_name: "Shinigami"}
+   
+    ])
+
+powers = Power.create([
+    { name: "intelligent", description: "very intelligent and quick"},
+    { name: "Getsugatensho", description: "Strong , fast and powerful"}
+    ])
+
+puts '✅ Done seeding'
